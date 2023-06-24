@@ -1,0 +1,18 @@
+# type Config struct {
+# 	ProxyAddr  string `mapstructure:"proxy_addr"`
+# 	ServerConfig []ServerConfig `mapstructure:"server_config"`
+# }
+
+# type ServerConfig struct {
+# 	ListenAddr  string `mapstructure:"listen_addr"`
+# 	TargetAddr string `mapstructure:"target_addr"`
+# }
+
+proxy_addr: "127.0.0.1:7890"
+server_config:
+  - 
+    listen_addr: ":6061"
+    target_addr: "ipinfo.io:443"
+  - 
+    listen_addr: ":6062"
+    target_addr: "www.baidu.com:443"
